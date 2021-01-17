@@ -15,4 +15,11 @@ public class ShrinkPlayer : MonoBehaviour
     {
         
     }
+
+     void OnCollisionEnter2D (Collision2D col){
+        if (col.collider.tag == "Player"){
+        
+        }
+
+    }
 }

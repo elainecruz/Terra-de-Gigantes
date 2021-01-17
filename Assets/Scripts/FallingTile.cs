@@ -36,9 +36,9 @@ public class FallingTile : MonoBehaviour
          rb.constraints = RigidbodyConstraints2D.None;
          rb.constraints = RigidbodyConstraints2D.FreezePositionX;
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
-        rb.gravityScale = 10;
+        rb.gravityScale = 100;
 
-        
+
 
     }
 
