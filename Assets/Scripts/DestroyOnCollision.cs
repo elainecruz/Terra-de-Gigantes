@@ -18,7 +18,8 @@ public class DestroyOnCollision : MonoBehaviour
 
      void OnCollisionEnter2D (Collision2D col){
      if (col.collider.tag == "FallingTile"){
-        Destroy(col.gameObject);     }
+        Destroy(col.gameObject);     
+    }
 
     }
 }

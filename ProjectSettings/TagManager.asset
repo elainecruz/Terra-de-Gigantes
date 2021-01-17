@@ -8,6 +8,7 @@ TagManager:
   - shrink
   - grow
   - normal_size
+  - collectable
   layers:
   - Default
   - TransparentFX

@@ -6,6 +6,8 @@ public class ShrinkPlayer : MonoBehaviour
 {
     public Vector3 downSize;
     public Vector3 regularSize;
+    public Vector3 bigSize;
+
     public bool finishShrink= false;
     public bool finishGrow = false;
 
@@ -20,6 +22,7 @@ public class ShrinkPlayer : MonoBehaviour
         }
 
         if (col.collider.tag == "grow"){
+            Destroy(col.gameObject);  
             StartCoroutine("Grow");
         }
 
@@ -44,7 +47,7 @@ public class ShrinkPlayer : MonoBehaviour
         while(!finishGrow){
             transform.localScale = new Vector3(transform.localScale.x+4, transform.localScale.y+4,1);
 
-            if(transform.localScale.x >= regularSize.x){
+            if(transform.localScale.x >= bigSize.x){
                 finishGrow = true;
             }
 
