@@ -4,12 +4,13 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 
-public class ChangeScene : MonoBehaviour
+public class LoadSceneAfterTime : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
     {
-        
+        StartCoroutine("LoadScene");
+
     }
 
     // Update is called once per frame
@@ -18,7 +19,11 @@ public class ChangeScene : MonoBehaviour
         
     }
 
-    public void LoadScene(){
-        SceneManager.LoadScene("PreGame");
-    }
+     IEnumerator LoadScene(){
+        yield return new WaitForSeconds(7);
+        SceneManager.LoadScene("Game");
+
+     
+     }
+
 }
