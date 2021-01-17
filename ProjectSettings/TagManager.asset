@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - FallingTile
+  - shrink
+  - grow
+  - normal_size
   layers:
   - Default
   - TransparentFX
