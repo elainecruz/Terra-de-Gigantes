@@ -31,7 +31,7 @@ public class ShrinkPlayer : MonoBehaviour
     IEnumerator Shrink(){
 
         while(!finishShrink){
-            transform.localScale = new Vector3(transform.localScale.x-4, transform.localScale.y-4,1);
+            transform.localScale = new Vector3(transform.localScale.x-5, transform.localScale.y-5,1);
 
             if(transform.localScale.x <= downSize.x){
                 finishShrink = true;
@@ -45,13 +45,13 @@ public class ShrinkPlayer : MonoBehaviour
     IEnumerator Grow(){
 
         while(!finishGrow){
-            transform.localScale = new Vector3(transform.localScale.x+4, transform.localScale.y+4,1);
+            transform.localScale = new Vector3(transform.localScale.x+5, transform.localScale.y+5,1);
 
             if(transform.localScale.x >= bigSize.x){
                 finishGrow = true;
             }
 
-            yield return new WaitForSeconds(1.5f);
+            yield return new WaitForSeconds(0.5f);
         }
 
     }
